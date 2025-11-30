@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Gabarito", sans-serif;
+}
+
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid gray 2px;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.navbar__s1__title {
+    color: #a435f0;
+    align-items: center;
+}
+
+.navbar__s2 {
+    padding: 10px;
+    border: solid black 1px;
+    border-radius: 30px;
+    width: 60%;
+    background-color: white;
+}
+
+.navbar__s2 input {
+    border: none;
+    outline: none;
+    width: 90%;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.navbar__s3 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* my learning-popup */
+
+.mylearning1 {
+    position: relative;
+    cursor: pointer;
+}
+
+.mylearning2 {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    border: 1px solid black;
+    width: 120px;
+    font-size: 13px;
+    padding: 10px;
+    display: none;
+    z-index: 10;
+}
+
+.mylearning1:hover .mylearning2 {
+    display: block;
+}
+
+
+.categories {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: solid gray 1px;
+    justify-content: space-around;
+
+}
+
+.categories p {
+    background-color: #a435f0;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 15px;
+     cursor: pointer;
+     order: solid #a435f0 2px;
+}
+.categories p:hover {
+   transition: 1s;
+   background-color: transparent;
+   color: black;
+   border: solid #a435f0 2px;
+   
+}
+
+.section-image {
+    position: relative;
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    margin-top: none;
+}
+
+.section-image__text {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    background-color: white;
+    padding: 20px;
+    border: solid black 3px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+       
+    }
+}
+.recommended {
+    padding: 20px;
+}
+
+.recommended__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.course-card {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin-bottom: 50px;
+}
+
+.course-card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+.course-del {
+    color: gray;
+    text-decoration: line-through;
+    padding-left: 5px;
+}
+
+.course-del1 {
+    color: gray;
+    text-decoration: line-through;
+    padding-left: 5px;
+}
+
+.course-del2 {
+    color: gray;
+    text-decoration: line-through;
+    padding-left: 5px;
+}
+
+.course-del3 {
+    color: gray;
+    text-decoration: line-through;
+    padding-left: 5px;
+}
+
+.topics {
+    padding: 10px;
+}
+
+.topics__container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.topics__container p {
+    border: solid gray 2px;
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+    flex-basis: 25%;
+}
+
+.popular {
+    padding: 10px;
+}
+
+.popular__container {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.popular__container {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.popular-card {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin-bottom: 50px;
+}
+
+.popular-card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.footer {
+    padding: 30px;
+    background-color: black;
+    color: white;
+}
+
+.footer__one {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer__one p {
+    margin: 20px;
+}
+
+.footer__two {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: center;
+    
+}
+
+/* Media Queries */
+
+@media screen and (max-width:800px){
+    body{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .course-card , .popular-card{
+        flex-basis: 45%;
+    }
+    .categories{
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .section-image__text{
+        top: 10%;
+        left: 2%;
+        padding: 5px;
+        font-size: 6px;
+        width: 80px;
+        height: 50px;
+    }
+}
